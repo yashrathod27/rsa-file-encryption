@@ -1,23 +1,49 @@
 RSA Encryption & Decryption:
 
-This application is a Python-based implementation of the RSA cryptographic algorithm developed for the Applied Cryptography (CP50087E) module at the University of West London. It provides a method for generating keys, encrypting and decrypting text files, and ensuring data integrity using cryptographic hashing.  
+This application is a Python-based implementation of the RSA cryptographic algorithm developed for the Applied Cryptography module at the University of West London. It provides a terminal-based interface to generate public and private key pairs and safely process text files.
 
-Features & Component Architecture
+Project Structure
+code.py - The core script containing the RSA mathematical algorithms, menu interface, and file operations.
 
-1. RSA Key Generation
+text.txt - The original source file containing the plaintext message to be protected.
 
-Prime Number Processing: The system takes two distinct prime numbers, $p$ and $q$, to calculate the modulus $n$ and Euler's totient $\phi(n)$.  
+text.txt.encrypted - The output file containing the secure ciphertext integers.
 
-Key Pair Production: It derives the public exponent $e$ and the private exponent $d$. This creates the public key used for encryption and the private key used for decryption.  
+text.txt.decrypted - The final output file showing the successfully decrypted plaintext.
 
-2. File Encryption & Decryption
 
-ASCII Character Mapping: The encryption function converts characters from a selected text file into their corresponding numerical ASCII values before applying the RSA formula.  
+System Functionality
 
-Tkinter GUI Integration: Instead of manual path typing, the script utilizes Python's built-in Tkinter library to launch a native file explorer window, allowing users to visually select .txt files.  
+1. Key Generation
 
-3. Integrity Verification (SHA-256)
+The tool computes the modulus $n$ and Euler's totient using two chosen prime numbers. It generates a public key pair $(e, n)$ for file encryption and a corresponding private key pair $(d, n)$ for file decryption.
 
-Checksum Creation: To prevent unauthorized tampering, the application generates a unique SHA-256 hash of the original file content during encryption.  
+2. File Encryption
 
-Verification Check: Upon decryption, the system recalculates the SHA-256 hash of the decrypted output and compares it to the original checksum to confirm the data remained unaltered.  
+The application processes the target text file by mapping each character to its equivalent numerical value. It applies the RSA encryption formula to generate a secure encrypted output file.
+
+3. File Decryption
+
+Using the correct private key parameters, the script reverses the mathematical operations on the encrypted data. It translates the numbers back into plain characters and saves the completely restored text into a separate decrypted file.
+
+How to Run the Script
+
+Step 1: Launch the Program
+
+Make sure Python is installed on your computer. Open your terminal or Command Prompt in the folder and run:
+
+```
+python code.py
+```
+
+Step 2: Generate Cryptographic Keys
+
+Choose the key generation option from the main menu. Save or copy down your generated public and private key components.
+
+Step 3: Run Encryption
+
+Select the encryption option from the menu. The script reads your source file, encrypts the text content, and outputs the encrypted file in the same folder.
+
+Step 4: Run Decryption
+
+Select the decryption option from the menu. Enter your private key values when prompted to securely restore the encrypted file back into readable text.
