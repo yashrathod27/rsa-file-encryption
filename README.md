@@ -1,4 +1,4 @@
-Applied Cryptography assignment
+RSA Encryption & Decryption:
 
 This application is a Python-based implementation of the RSA cryptographic algorithm developed for the Applied Cryptography (CP50087E) module at the University of West London. It provides a method for generating keys, encrypting and decrypting text files, and ensuring data integrity using cryptographic hashing.  
 
