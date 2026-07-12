@@ -25,11 +25,15 @@ Key Pair Production: The program randomly selects a public exponent $e$ that is 
 
 2. File Encryption
 
-The application processes the target text file by mapping each character to its equivalent numerical value. It applies the RSA encryption formula to generate a secure encrypted output file.
+ASCII Character Mapping: The application processes the target text file by mapping each character to its equivalent numerical ASCII value.
+
+RSA Formula Processing: It applies the standard mathematical formula ($c = m^e \pmod n$) using the public key parameters to output a secure ciphertext file.
 
 3. File Decryption
 
-Using the correct private key parameters, the script reverses the mathematical operations on the encrypted data. It translates the numbers back into plain characters and saves the completely restored text into a separate decrypted file.
+Mathematical Reversal: Using the private key parameters, the script reverses the mathematical operations on the encrypted data ($m = c^d \pmod n$).
+
+Plaintext Restoration: It translates the numeric streams back into readable text characters and saves the completely restored text into a separate decrypted file.
 
 How to Run the Script
 
@@ -43,12 +47,20 @@ python code.py
 
 Step 2: Generate Cryptographic Keys
 
-Choose the key generation option from the main menu. Save or copy down your generated public and private key components.
+Select option 1 ("Generate RSA Keys") from the main menu.
 
-Step 3: Run Encryption
+The script will instantly compute and display your public key pair and private key pair on the screen. Copy these parameters down.
 
-Select the encryption option from the menu. The script reads your source file, encrypts the text content, and outputs the encrypted file in the same folder.
+Step 3: Run File Encryption
 
-Step 4: Run Decryption
+Select option 2 ("Encrypt File") from the menu.
 
-Select the decryption option from the menu. Enter your private key values when prompted to securely restore the encrypted file back into readable text.
+A Tkinter graphical file window will pop up. Choose your text.txt file, input your public key values when prompted, and the .encrypted file will appear in the folder.
+
+Step 4: Run File Decryption
+
+Select option 3 ("Decrypt File") from the menu.
+
+Select the encrypted file using the pop-up window, input your secret private key values, and verify that the message content successfully matches your original plaintext.
+
+CRITICAL REMINDER: You must use the exact private key numbers ($d$ and $n$) that were generated in Step 2 to successfully decrypt the file and completely restore it back into readable text.
