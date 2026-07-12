@@ -17,7 +17,11 @@ System Functionality
 
 1. Key Generation
 
-The tool computes the modulus $n$ and Euler's totient using two chosen prime numbers. It generates a public key pair $(e, n)$ for file encryption and a corresponding private key pair $(d, n)$ for file decryption.
+Prime Selection: The tool automatically picks two distinct random prime numbers ($p$ and $q$) within a localized range of 1 to 99.
+
+Modulus and Totient Calculation: It computes the product $n = p \times q$ to establish the modulus and determines Euler's totient $\phi(n) = (p - 1) \times (q - 1)$.
+
+Key Pair Production: The program randomly selects a public exponent $e$ that is coprime to $\phi(n)$, and calculates its modular multiplicative inverse $d$. This produces a working public key $(e, n)$ and private key $(d, n)$ instantly without complex heavy computations.
 
 2. File Encryption
 
