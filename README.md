@@ -3,6 +3,7 @@ RSA Encryption & Decryption:
 This application is a Python-based implementation of the RSA cryptographic algorithm developed for the Applied Cryptography module at the University of West London. It provides a terminal-based interface to generate public and private key pairs and safely process text files.
 
 Project Structure
+
 code.py - The core script containing the RSA mathematical algorithms, menu interface, and file operations.
 
 text.txt - The original source file containing the plaintext message to be protected.
