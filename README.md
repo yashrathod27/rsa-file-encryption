@@ -1,6 +1,7 @@
 RSA Encryption & Decryption:
 
 This application is a Python-based implementation of the RSA cryptographic algorithm developed for the Applied Cryptography module at the University of West London. It provides a terminal-based interface to generate public and private key pairs and safely process text files.
+<br><br>
 
 Project Structure:
 
@@ -11,7 +12,7 @@ text.txt - The original source file containing the plaintext message to be prote
 text.txt.encrypted - The output file containing the secure ciphertext integers.
 
 text.txt.decrypted - The final output file showing the successfully decrypted plaintext.
-
+<br><br>
 
 System Functionality:
 
@@ -36,7 +37,8 @@ RSA Formula Processing: It applies the standard mathematical formula ($c = m^e \
 Mathematical Reversal: Using the private key parameters, the script reverses the mathematical operations on the encrypted data ($m = c^d \pmod n$).
 
 Plaintext Restoration: It translates the numeric streams back into readable text characters and saves the completely restored text into a separate decrypted file.
-<br>
+<br><br>
+
 #How to Run the Script:
 
 #Step 1: Launch the Program
@@ -46,8 +48,7 @@ Make sure Python is installed on your computer. Open your terminal or Command Pr
 ```
 python code.py
 ```
-<br><br>
-
+<br>
 #Step 2: Generate Cryptographic Keys
 
 Select option 1 ("Generate RSA Keys") from the main menu. 
